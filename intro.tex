@@ -1,0 +1,8 @@
+\section*{Introduction}
+Dafny uses the concept of ghost variables to facilitate the proof of operations on complex data structures. The ghost variables are only for verification purposes and will be removed before generating the executable code.\\
+
+The class invariant is built manually via a predicate function Valid(), which will be checked before and after each operation. The assertion of class invariant establishes the isomorphism between the 'real' data structure (under verification) and the ghost data structure which is only for verification purpose. If the isomorphism is preserved after the operation, furthermore the updated ghost structure and the old ghost structure before the operation have certain relation, then we can expect the same relation holds for the updated 'real' data structure and the old 'real' structure before the operation.\\
+
+For example, the ghost field 'footprint' of a node X is a set that contains exactly all the nodes that are reachable from the node X via repeatedly applying the 'next' relation. If after some operation a new node Y is included in the footprint of X, and the corresponding predicate related to 'footprint' still holds, then there must be a path from X to Y.\\
+
+Later in the report, I will explain how to use Dafny to verify the operations on a singly-linked list in the implementation section; the performance of verifying the properties will be listed in the evaluation section; and I will also share the experience of using the Dafny tool in the Learning Points section.

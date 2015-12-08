@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{dafny1}
+K.~Rustan~M. Leino.
+\newblock Dafny: An automatic program verifier for functional correctness.
+\newblock In {\em Logic for Programming, Artificial Intelligence, and Reasoning
+  - 16th International Conference, LPAR-16, Dakar, Senegal, April 25-May 1,
+  2010, Revised Selected Papers}, pages 348--370, 2010.
+
+\bibitem{wiki:dbc}
+Wikipedia.
+\newblock Design by contract --- wikipedia{,} the free encyclopedia, 2009.
+\newblock [Online; accessed 16-November-2015].
+
+\end{thebibliography}

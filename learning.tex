@@ -1,0 +1,32 @@
+\section*{Learning Points}
+\subsection*{LI is very important}
+It is vital to come up with the right LI, so that the loop can be proved which is necessary for proving the total correctness of program. It is important to carefully analyse the relation that remain unchanged during the iterations. The stronger property may not hold after some update, but possibly the weaker version already suffices. Sometimes it is hard to find the invariant for the whole structure, then it may be helpful to divide the elements into different segments/partitions according to their satisfying properties. After we made some separate conclusion on the new abstraction level, we may observe how the properties change between different statements of the loop body; if the conclusion hold at the beginning of the iteration and after executing one iteration, it holds again, then we find a loop invariant. 
+
+\subsection*{Dafny is well documented language}
+There is a detailed online tutorial for Dafny, where every program construct and language feature have been explained and the usage of operations are exemplified well. I have learned deeply how to write Dafny programs with different built-in types and lemmas to prove functional correctness. It is vital to provide the most accurate frame conditions for functions (reads clause) and methods (modifies clause) so that the proof can be performed smoothly. It is also very important to provide proper lemmas to facilitate/accelerate proof process. 
+
+\subsection*{Dafny tool is NOT documented}
+In contrast to the language, the Dafny tool does not have documented API and it is difficult to find the available command-line options. I found the full list of command-line options by investigating the source code of Dafny.
+
+
+\subsection*{Dafny tool has performance bug and does not scale up}
+The following observations are summarized from my experiments:\\
+
+\begin{itemize}
+\item  Unused lemmas may degrade the performance of verification dramatically even if they can be efficiently verified independently. A hypothesis for this phenomenon is adding the junctions(unused lemmas) may decrease the chance of targeting and selecting the truly needed lemma. 
+
+\item Moving the lemmas from class level to module level seems increasing the efficiency.
+
+\item Adding an assertion (through pre/post or assert statement in the method body) at method A may have significant influence on the time used to prove some other method B. This is quite annoying and unpredictable. 
+
+\item Even if two methods can be efficiently verified separately, merging them into one big file will slow down the proof dramatically. In one experiment, two files can be verified in 24 seconds and 33 seconds respectively, but merging them into one big file took over half an hour to verify. The overhead really goes fast.
+
+\end{itemize}
+
+\subsection*{Some comparison of editor of Dafny Code}
+In the early stage of the project, I tried to use the Visual Studio as a platform and had the dafny installed as a plug-in; however, that is not very good choice for developing large piece of dafny code, because there are too many false positives and Visual Studio does not provide clear answer quickly.\\
+
+After some time of using plain text editor, I found emacs with boogie-friends plug-in is very powerful and suitable for the development of dafny code; not only because it provides the syntax highlighting, but also because it integrates the dafny compiler so that I can easily compile my code via pressing key combination and see the output in the same window after I am satisfied with the code.\\
+
+
+ 

@@ -1,0 +1,7 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: report.aux
+The style file: plain.bst
+Database file #1: ref.bib
+A bad cross reference---entry "dafny1"
+refers to entry "DBLP:conf/lpar/2010d", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/lpar/2010d"
+(There was 1 error message)

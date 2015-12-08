@@ -1,0 +1,15 @@
+\section*{Evaluation}
+Most operations/lemmas can be verified in several seconds, some more complex may need longer but usually not exceeding half a minute.\\
+
+During the implementation, besides the traditional method invocation and while loops, I also tried something similar to the \emph{Basic Path} approach for generating the verification condition. Basically, I identified different parts of the method which are separated by pre/post conditions and loop invariants, and implemented the following methods/predicates:\\
+
+\begin{itemize}
+\item LI: predicate for expressing loop invariant.
+\item pre2LI: which is a method that verifies executing the initialization code at the state which satisfies the pre-condition will result in a state which satisfies the loop invariant.
+
+\item LIGuardExecBody2LI: Executing the loop body in a state which satisfies the loop invariant and loop guard will result in a state that still satisfies the loop invariant.
+
+\item LIAndNegGuard2Post: it is in fact a lemma that checks the fact that loop invariant together with the negation of the loop guard will imply the post condition.
+\end{itemize}
+
+Comparing with recursive approach, iterative approach is more complex and potentially slower for verification. The rationale of implementing the code in iterative fashion is that the iterative approach is more efficient in execution; and deliver a verified version of the iterative implementation is quite attractive because we only need to verify the code once and then we can trustfully use it since then.
