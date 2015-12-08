@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  7 DEC 2015 20:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  8 DEC 2015 10:07
 entering extended mode
 **report.tex
 (A:\CourseWork-UIUC\CS477\CourseProj\report.tex
@@ -459,18 +459,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-[5]) (A:\CourseWork-UIUC\CS477\CourseProj\evaluation.tex
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 228.
+) (A:\CourseWork-UIUC\CS477\CourseProj\evaluation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
 ) (A:\CourseWork-UIUC\CS477\CourseProj\learning.tex [6]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
@@ -511,7 +516,7 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (9 pages, 198236 bytes).
+Output written on report.pdf (9 pages, 198606 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
